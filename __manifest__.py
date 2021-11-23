@@ -25,8 +25,11 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'wizards/leave_excel_report.xml',
+        'reports/report.xml',
         'views/views.xml',
         'views/templates.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

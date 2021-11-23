@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_leave_report_form_wizard" model="ir.ui.view">
+        <field name="name">Leave Report</field>
+        <field name="model">leave.wizard.report</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Leave Report">
+                <group>
+                    <group>
+                        <field name="employee_id"/>
+                    </group>
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_excel_report" string="Get Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_print_excel_report" model="ir.actions.act_window">
+        <field name="name">Leave Report</field>
+        <field name="res_model">leave.wizard.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_leave_report_form_wizard"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
